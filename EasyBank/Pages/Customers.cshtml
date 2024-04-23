@@ -1,0 +1,27 @@
+﻿@page
+@model EasyBank.Pages.CustomersModel
+@{
+}
+
+<h1>Alla Suppliers</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Givenname</th>
+            <th scope="col">Surname</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var supp in Model.Customers)
+        {
+            <tr>
+                <td>@supp.Id</td>
+                <td>@supp.Givenname</td>
+                <td>@supp.Surname</td>
+            </tr>
+        }
+    </tbody>
+</table>
